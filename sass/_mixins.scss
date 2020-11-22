@@ -1,0 +1,58 @@
+@mixin linear-gradient-top($from, $to) {
+    background: $to;
+    background: -moz-linear-gradient(top, $from 0%, $to 100%) !important;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $from), color-stop(100%, $to)) !important;
+    background: -webkit-linear-gradient(top, $from 0%, $to 100%) !important;
+    background: -o-linear-gradient(top, $from 0%, $to 100%) !important;
+    background: linear-gradient(to bottom, $from 0%, $to 100%) !important;
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#{$from}, endColorstr=#{$to})
+}
+
+@mixin linear-gradient-right($from, $by, $to) {
+    background: $to;
+    background: -moz-linear-gradient(right, $from 0%, $by 52.49%, $to 100%) !important;
+    background: -webkit-gradient(linear, bottom right, bottom left, color-stop(0%, $from), color-stop(52.49%, $by), color-stop(100%, $to)) !important;
+    background: -webkit-linear-gradient(right, $from 0%, $to 100%) !important;
+    background: -o-linear-gradient(right, $from 0%, $by 52.49%, $to 100%) !important;
+    background: linear-gradient(to left, $from 0%, $by 52.49%, $to 100%) !important;
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#{$from}, endColorstr=#{$to})
+}
+
+@mixin smooth($t) {
+    -webkit-transition: $t ease-out;
+    -moz-transition: $t ease-out;
+    -o-transition: $t ease-out;
+    transition: $t ease-out;
+}
+
+@mixin backrgound-image($img) {
+    background: url($img) center center no-repeat;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+
+@mixin trans {
+    box-shadow: inset 1px 0px 1px 0px #e1e1e1c7;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.6s;
+    transition-duration: 0.6s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: all 0.6s ease-in-out;
+}
+
+@mixin active {
+    padding: 5px 20px;
+    background: #E53167;
+    border: 1px solid #fff;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 25px;
+    color: #fff;
+}
